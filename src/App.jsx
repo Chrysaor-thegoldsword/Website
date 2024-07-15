@@ -119,18 +119,33 @@ const App = () => {
             style={{ backgroundColor: "black" }}
           >
             <div className="z-20 text-center">
-              <Typewriter
-                options={{
-                  className: "text-4xl",
-                  strings: [
-                    '<span style="color: red;font-size:64px">TEDx</span><span style="color: white;font-size:64px">MDIGurgaon</span>',
-                    '<span style="color: white;font-size:48px">Embrace The Shift</span>',
-                  ],
-                  autoStart: true,
-                  loop: true,
-                  cursor: "",
-                }}
-              />
+              {window.innerWidth > 400 ? (
+                <Typewriter
+                  options={{
+                    className: "text-4xl",
+                    strings: [
+                      '<span style="color: red;font-size:64px">TEDx</span><span style="color: white;font-size:64px">MDIGurgaon</span>',
+                      '<span style="color: white;font-size:48px">Embrace The Shift</span>',
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    cursor: "",
+                  }}
+                />
+              ) : (
+                <Typewriter
+                  options={{
+                    className: "text-4xl",
+                    strings: [
+                      '<span style="color: red;font-size:36px">TEDx</span><span style="color: white;font-size:36px">MDIGurgaon</span>',
+                      '<span style="color: white;font-size:24px">Embrace The Shift</span>',
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    cursor: "",
+                  }}
+                />
+              )}
             </div>
             <div
               className="absolute top-0 left-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-30 z-10"

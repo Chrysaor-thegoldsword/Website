@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const NavbarComponent = () => {
   const handleFormOpen = () => {
     window.open("https://forms.gle/Wu3doj779kC6rk3p6", "_blank");
   };
+  const navigate = useNavigate();
   return (
     <motion.nav
       initial={{ opacity: 0, y: -50 }}
@@ -13,10 +15,21 @@ const NavbarComponent = () => {
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+          <span className="self-center text-sm md:text-2xl font-semibold whitespace-nowrap text-white">
             TEDxMDIGurgaon
           </span>
         </a>
+       <div className="flex gap-x-4">
+       <div className="flex">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => navigate('/team')}
+            className="text-red-600 bg-white hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+          >
+           Team
+          </motion.button>
+        </div>
         <div className="flex md:order-2 space-x-3">
           <motion.button
             whileHover={{ scale: 1.1 }}
@@ -51,6 +64,7 @@ const NavbarComponent = () => {
             </svg>
           </button> */}
         </div>
+       </div>
         <div
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-sticky"
@@ -65,14 +79,7 @@ const NavbarComponent = () => {
                 Home
               </a>
             </li>
-            <li>
-              <a
-                href="/team"
-                className="block py-2 px-3 text-gray-400 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-gray-400 md:p-0 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >
-                Team
-              </a>
-            </li>
+          
             <li>
               <a
                 href="/#services"
