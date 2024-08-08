@@ -13,16 +13,17 @@ import p2 from "./assets/conv_event/1 (2).jpeg";
 import p3 from "./assets/conv_event/1 (3).jpeg";
 import p4 from "./assets/conv_event/1 (4).jpeg";
 import p5 from "./assets/conv_event/1 (7).jpeg";
-import nitin from "./assets/speakers/nitin.png";
-import terence from "./assets/speakers/terence.png";
-import prafull from "./assets/speakers/prafull.png";
-import mira from "./assets/speakers/mira erda.png";
-import prahalath from "./assets/speakers/prahalath.png";
-import gaurang from "./assets/speakers/gaurang.png";
-import velumani from "./assets/speakers/velumani.png";
+import akash from "./assets/PresentSpeakers/AKASH GUPTA.png";
+import ankur from "./assets/PresentSpeakers/ANKUR WARIKOO.png";
+import zoya from "./assets/PresentSpeakers/CAPTAIN ZOYA AGARWAL.png";
+import anand from "./assets/PresentSpeakers/DR. ANAND S.png";
+import awdhesh from "./assets/PresentSpeakers/DR. AWDHESH SINGH.png";
+import vandana from "./assets/PresentSpeakers/MAJOR VANDANA SHARMA.png";
+import puneet from "./assets/PresentSpeakers/PUNEET RAO.png";
+import vicky from "./assets/PresentSpeakers/VICKY ROY.png";
+import vikram from "./assets/PresentSpeakers/VIKRAM RAI.png";
 
-// import pankhuri from "./assets/Pankhuri.jpeg";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
@@ -33,21 +34,25 @@ const App = () => {
 
   const pastEvents = [
     { id: 1, name: "Team", image: p1, member: "Senior member" },
-    { id: 1, name: "Team", image: p2, member: "Senior member" },
-    { id: 1, name: "Team", image: p3, member: "Senior member" },
-    { id: 1, name: "Prahatlhan", image: p4, member: "Senior member" },
-    { id: 1, name: "Terence", image: p5, member: "Senior member" },
+    { id: 2, name: "Team", image: p2, member: "Senior member" },
+    { id: 3, name: "Team", image: p3, member: "Senior member" },
+    { id: 4, name: "Prahatlhan", image: p4, member: "Senior member" },
+    { id: 5, name: "Terence", image: p5, member: "Senior member" },
   ];
 
   const teamMembers = [
-    { id: 1, name: "Nitin Gadkari", image: nitin, member: "Senior member" },
-    { id: 2, name: "Terence Lewis", image: terence, member: "Senior member" },
-    { id: 3, name: "Prahalathan", image: prahalath, member: "Senior member" },
-    { id: 4, name: "Gauranga Das", image: gaurang, member: "Senior member" },
-    { id: 5, name: "Prafull Billore", image: prafull, member: "Senior member" },
-    { id: 6, name: "Mira Erda", image: mira, member: "Senior member" },
-    { id: 7, name: "A. Velumani", image: velumani, member: "Senior member" },
+    { id: 1, name: "Akash Gupta, Founder ZYPP Electric", image: akash, member: "Senior member" },
+    { id: 2, name: "Ankur Warikoo", image: ankur, member: "Senior member" },
+    { id: 3, name: "Captain Zoya Agarwal, Pilot", image: zoya, member: "Senior member" },
+    { id: 4, name: "Dr. S Anand", image: anand, member: "Senior member" },
+    { id: 5, name: "Awdhesh Singh", image: awdhesh, member: "Senior member" },
+    { id: 6, name: "Major Vandana", image: vandana, member: "Senior member" },
+    { id: 7, name: "Puneet Rao, Fitness Influencer", image: puneet, member: "Senior member" },
+    { id: 8, name: "Vicky Roy, International Photographer", image: vicky, member: "Senior member" },
+    { id: 9, name: "Vikram Rai, MD GE South Asia", image: vikram, member: "Senior member" },
   ];
+
+  const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
   useEffect(() => {
     const handleSmoothScroll = (event) => {
@@ -56,25 +61,25 @@ const App = () => {
         event.preventDefault();
         const hash = target.hash;
         const element = document.querySelector(hash);
-        const offsetTop =
-          element.offsetTop - document.querySelector("nav").offsetHeight;
+        const offsetTop = element.offsetTop - document.querySelector("nav").offsetHeight;
         window.scrollTo({
           top: offsetTop,
           behavior: "smooth",
         });
       }
     };
-
+  
     document.querySelectorAll("a").forEach((anchor) => {
       anchor.addEventListener("click", handleSmoothScroll);
     });
-
+  
     return () => {
       document.querySelectorAll("a").forEach((anchor) => {
         anchor.removeEventListener("click", handleSmoothScroll);
       });
     };
   }, []);
+  
 
   useEffect(() => {
     if (videoEnded) {
@@ -93,7 +98,7 @@ const App = () => {
     <>
       <AnimatePresence>
         <ScrollTopButton />
-        {!videoEnded && (
+        {!videoEnded && isChrome && (
           <motion.video
             src={video}
             id="tedxVideo"
@@ -107,7 +112,7 @@ const App = () => {
           />
         )}
       </AnimatePresence>
-      {videoEnded && (
+      {(!isChrome || videoEnded) && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -125,7 +130,7 @@ const App = () => {
                     className: "text-4xl",
                     strings: [
                       '<span style="color: red;font-size:64px">TEDx</span><span style="color: white;font-size:64px">MDIGurgaon</span>',
-                      '<span style="color: white;font-size:48px">Embrace The Shift</span>',
+                      '<span style="color: white;font-size:48px">Embracing The Shift</span>',
                     ],
                     autoStart: true,
                     loop: true,
@@ -138,7 +143,7 @@ const App = () => {
                     className: "text-4xl",
                     strings: [
                       '<span style="color: red;font-size:36px">TEDx</span><span style="color: white;font-size:36px">MDIGurgaon</span>',
-                      '<span style="color: white;font-size:24px">Embrace The Shift</span>',
+                      '<span style="color: white;font-size:24px">Embracing The Shift</span>',
                     ],
                     autoStart: true,
                     loop: true,
@@ -153,39 +158,6 @@ const App = () => {
             ></div>
           </div>
           <motion.section
-            className="min-h-screen bg-gray-900 text-white p-8"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            id="about"
-          >
-            <h2 className="text-3xl font-bold mb-8 w-full text-center">
-              Past Events
-            </h2>
-            {/* Images to Shift */}
-            <Carousel images={pastEvents} />
-            {/* <h2 className="text-3xl font-bold my-8 w-full text-center">
-              Past Speakers
-            </h2> */}
-            {/* Images to Shift */}
-            {/* <Carousel images={teamMembers} /> */}
-            <div className="container mx-auto px-4">
-              <div className="sticky">
-                <ScrollFadeComponent />
-              </div>
-            </div>
-          </motion.section>
-          <motion.section
-            className="min-h-screen bg-black text-white p-8"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            id="services"
-          >
-            <h2 className="text-3xl font-bold mb-4">TED & TEDx</h2>
-            <ImageTextSection />
-          </motion.section>
-          <motion.section
             className="min-h-screen bg-gray-700 text-white p-8"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -193,10 +165,9 @@ const App = () => {
             id="contact"
           >
             <h2 className="text-3xl font-bold mb-8 w-full text-center">
-              Past Speakers
+              Speaker Line-Up
             </h2>
-            {/* Images to Shift */}
-            <Carousel images={teamMembers} />
+            <Carousel images={teamMembers} number={4} />
             <div className="container mx-auto py-12">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -224,6 +195,33 @@ const App = () => {
                   that matter.
                 </motion.p>
               </motion.div>
+            </div>
+          </motion.section>
+          <motion.section
+            className="min-h-screen bg-black text-white p-8"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            id="services"
+          >
+            <h2 className="text-3xl font-bold mb-4">TED & TEDx</h2>
+            <ImageTextSection />
+          </motion.section>
+          <motion.section
+            className="min-h-screen bg-gray-900 text-white p-8"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            id="about"
+          >
+            <h2 className="text-3xl font-bold mb-8 w-full text-center">
+              Past Events
+            </h2>
+            <Carousel images={pastEvents} />
+            <div className="container mx-auto px-4">
+              <div className="sticky">
+                <ScrollFadeComponent />
+              </div>
             </div>
           </motion.section>
           <FooterComponent />

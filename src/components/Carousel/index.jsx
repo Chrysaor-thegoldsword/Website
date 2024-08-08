@@ -4,12 +4,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { motion } from 'framer-motion';
 
-const Carousel = ({ images }) => {
+const Carousel = ({ images,number=3 }) => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Show 3 slides on desktop
+    slidesToShow: number, // Show 3 slides on desktop
     slidesToScroll: 3,
     initialSlide: 0,
     autoplay: true,

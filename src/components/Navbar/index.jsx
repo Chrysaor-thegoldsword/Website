@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const NavbarComponent = () => {
   const handleFormOpen = () => {
-    window.open("https://forms.gle/Wu3doj779kC6rk3p6", "_blank");
+    window.open("https://forms.gle/oKqMPkNGf3YkiKHx6", "_blank");
   };
   const navigate = useNavigate();
   return (
