@@ -1,46 +1,69 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
 
 const FooterComponent = () => {
+  const form = useRef();
 
-    
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_8voj3lt',   // Replace with your EmailJS service ID
+      'template_6pph3dt',  // Replace with your EmailJS template ID
+      form.current,
+      'NBnr6Nbu-0EKHQCsl'       // Replace with your EmailJS user ID
+    )
+    .then((result) => {
+        console.log(result.text);
+        alert('Message sent successfully!');
+    }, (error) => {
+        console.log(error.text);
+        alert('Failed to send the message. Please try again.');
+    });
+
+    e.target.reset();
+  };
+
   return (
     <motion.footer
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       className="bg-black text-white py-8"
-      id='footer'
+      id="footer"
     >
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-start md:space-x-8 space-y-8 md:space-y-0">
           <div className="w-full md:w-1/2">
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <form className="space-y-4">
+            <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <div>
                 <label
-                  htmlFor="name"
+                  htmlFor="from_name"
                   className="block text-sm font-medium text-gray-300"
                 >
                   Name
                 </label>
                 <input
                   type="text"
-                  id="name"
+                  name="from_name"
+                  id="from_name"
                   className="block w-full p-2 mt-1 text-black rounded-md focus:ring-red-500 focus:border-red-500"
                   required
                 />
               </div>
               <div>
                 <label
-                  htmlFor="email"
+                  htmlFor="reply_to"
                   className="block text-sm font-medium text-gray-300"
                 >
                   Email
                 </label>
                 <input
                   type="email"
-                  id="email"
+                  name="reply_to"
+                  id="reply_to"
                   className="block w-full p-2 mt-1 text-black rounded-md focus:ring-red-500 focus:border-red-500"
                   required
                 />
@@ -53,6 +76,7 @@ const FooterComponent = () => {
                   Message
                 </label>
                 <textarea
+                  name="message"
                   id="message"
                   rows="4"
                   className="block w-full p-2 mt-1 text-black rounded-md focus:ring-red-500 focus:border-red-500"
@@ -117,10 +141,10 @@ const FooterComponent = () => {
               <p>
                 Email us at:{" "}
                 <a
-                  href="mailto:contact@tedxmdigurganon.com"
+                  href="mailto:tedx@mdi.ac.in"
                   className="text-red-500 hover:underline"
                 >
-                  contact@tedxmdigurganon.com
+                  tedx@mdi.ac.in
                 </a>
               </p>
               <p>
@@ -135,7 +159,7 @@ const FooterComponent = () => {
               <p>
                 Address: <br></br>
                 <a
-                  href="tel:+123456789"
+                  href="https://goo.gl/maps/YOUR_GOOGLE_MAPS_LINK"
                   className="text-red-500 hover:underline"
                 >
                   Mehrauli Rd, Block C, Sukhrali, Sector 17, Gurugram, Haryana

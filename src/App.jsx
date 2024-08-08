@@ -105,7 +105,7 @@ const App = () => {
             autoPlay
             muted
             onEnded={handleVideoEnd}
-            className="fixed top-0 left-0 w-full h-full object-cover z-10"
+            className="fixed top-0 left-0 w-full h-full bg-black object-scale-down md:object-cover z-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
