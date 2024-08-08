@@ -9,10 +9,10 @@ const FooterComponent = () => {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_8voj3lt',   // Replace with your EmailJS service ID
-      'template_6pph3dt',  // Replace with your EmailJS template ID
+      import.meta.env.VITE_ENV_SERVICE_ID,   // Replace with your EmailJS service ID
+      import.meta.env.VITE_ENV_SERVICE_ID ,  // Replace with your EmailJS template ID
       form.current,
-      'NBnr6Nbu-0EKHQCsl'       // Replace with your EmailJS user ID
+      import.meta.env.VITE_ENV_SERVICE_ID         // Replace with your EmailJS user ID
     )
     .then((result) => {
         console.log(result.text);
@@ -107,7 +107,7 @@ const FooterComponent = () => {
             </div>
             <div className="flex space-x-4">
               <motion.a
-                href="https://facebook.com"
+                href="https://www.facebook.com/TEDxMDIG/"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="text-white hover:text-gray-400"
@@ -127,7 +127,7 @@ const FooterComponent = () => {
                 Twitter
               </motion.a>
               <motion.a
-                href="https://instagram.com"
+                href="https://www.instagram.com/tedxmdigurgaon"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="text-white hover:text-gray-400"
@@ -150,10 +150,10 @@ const FooterComponent = () => {
               <p>
                 Call us at:{" "}
                 <a
-                  href="tel:+123456789"
+                  href="tel:+918299241970"
                   className="text-red-500 hover:underline"
                 >
-                  +123 456 789
+                 8299241970
                 </a>
               </p>
               <p>

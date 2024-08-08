@@ -16,30 +16,30 @@ const NavbarComponent = () => {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3">
           <span className="self-center text-sm md:text-2xl font-semibold whitespace-nowrap text-white">
-            TEDxMDIGurgaon
+            <span className="text-red-500"> TEDx</span>MDIGurgaon
           </span>
         </a>
-       <div className="flex gap-x-4">
-       <div className="flex">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => navigate('/team')}
-            className="text-red-600 bg-white hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
-          >
-           Team
-          </motion.button>
-        </div>
-        <div className="flex md:order-2 space-x-3">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => handleFormOpen()}
-            className="text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
-          >
-            Book Ticket
-          </motion.button>
-          {/* <button
+        <div className="flex gap-x-4">
+          <div className="flex">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => navigate("/team")}
+              className="text-red-600 bg-white hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+            >
+              Team
+            </motion.button>
+          </div>
+          <div className="flex md:order-2 space-x-3">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => handleFormOpen()}
+              className="text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+            >
+              Book Ticket
+            </motion.button>
+            {/* <button
             data-collapse-toggle="navbar-sticky"
             type="button"
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -63,8 +63,8 @@ const NavbarComponent = () => {
               />
             </svg>
           </button> */}
+          </div>
         </div>
-       </div>
         <div
           className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
           id="navbar-sticky"
@@ -79,7 +79,7 @@ const NavbarComponent = () => {
                 Home
               </a>
             </li>
-          
+
             <li>
               <a
                 href="/#services"

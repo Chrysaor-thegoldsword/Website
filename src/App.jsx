@@ -44,7 +44,7 @@ const App = () => {
     { id: 1, name: "Akash Gupta, Founder ZYPP Electric", image: akash, member: "Senior member" },
     { id: 2, name: "Ankur Warikoo", image: ankur, member: "Senior member" },
     { id: 3, name: "Captain Zoya Agarwal, Pilot", image: zoya, member: "Senior member" },
-    { id: 4, name: "Dr. S Anand", image: anand, member: "Senior member" },
+    { id: 4, name: "S Anand", image: anand, member: "Senior member" },
     { id: 5, name: "Awdhesh Singh", image: awdhesh, member: "Senior member" },
     { id: 6, name: "Major Vandana", image: vandana, member: "Senior member" },
     { id: 7, name: "Puneet Rao, Fitness Influencer", image: puneet, member: "Senior member" },

@@ -31,7 +31,8 @@ const TeamSection = ({ title, teamMembers }) => {
             <img
               src={member.image}
               alt={member.name}
-              className="w-full h-80 object-cover  mb-4"
+              className="w-full h-80 object-cover mb-4"
+              loading="lazy"
             />
             <h3 className="text-xl font-semibold text-black">{member.name}</h3>
             <p className="text-gray-500">{member.designation}</p>
@@ -50,6 +51,7 @@ const TeamSection = ({ title, teamMembers }) => {
                   src={member.image}
                   alt={member.name}
                   className="w-full h-80 object-cover mb-4"
+                  loading="lazy"
                 />
                 <h3 className="text-xl font-semibold text-black">
                   {member.name}
