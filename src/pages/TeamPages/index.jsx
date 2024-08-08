@@ -6,7 +6,7 @@ import FooterComponent from "../../components/Footer";
 import utsukh from "../../assets/team/utsukh.png";
 import shrish from "../../assets/team/shrish.png";
 import ayan from "../../assets/team/ayan.jpeg";
-import karthikeyan from "../../assets/team/karthikeyan.jpg";
+import karthikeyan from "../../assets/team/karthik.jpeg";
 import mohak from "../../assets/team/mohak.png";
 import mukul from "../../assets/team/mukul.jpeg";
 import pankhuri from "../../assets/team/Pankhuri.jpeg";
