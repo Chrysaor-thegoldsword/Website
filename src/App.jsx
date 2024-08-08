@@ -13,15 +13,15 @@ import p2 from "./assets/conv_event/1 (2).jpeg";
 import p3 from "./assets/conv_event/1 (3).jpeg";
 import p4 from "./assets/conv_event/1 (4).jpeg";
 import p5 from "./assets/conv_event/1 (7).jpeg";
-import akash from "./assets/PresentSpeakers/AKASH GUPTA.png";
-import ankur from "./assets/PresentSpeakers/ANKUR WARIKOO.png";
-import zoya from "./assets/PresentSpeakers/CAPTAIN ZOYA AGARWAL.png";
-import anand from "./assets/PresentSpeakers/DR. ANAND S.png";
-import awdhesh from "./assets/PresentSpeakers/DR. AWDHESH SINGH.png";
-import vandana from "./assets/PresentSpeakers/MAJOR VANDANA SHARMA.png";
-import puneet from "./assets/PresentSpeakers/PUNEET RAO.png";
-import vicky from "./assets/PresentSpeakers/VICKY ROY.png";
-import vikram from "./assets/PresentSpeakers/VIKRAM RAI.png";
+import akash from "./assets/PresentSpeakers/AKASH GUPTA.jpeg";
+import ankur from "./assets/PresentSpeakers/ANKUR WARIKOO.jpeg";
+import zoya from "./assets/PresentSpeakers/CAPTAIN ZOYA AGARWAL.jpeg";
+import anand from "./assets/PresentSpeakers/DR. ANAND S.jpeg";
+import awdhesh from "./assets/PresentSpeakers/DR. AWDHESH SINGH.jpeg";
+import vandana from "./assets/PresentSpeakers/MAJOR VANDANA SHARMA.jpeg";
+import puneet from "./assets/PresentSpeakers/PUNEET RAO.jpeg";
+import vicky from "./assets/PresentSpeakers/VICKY ROY.jpeg";
+import vikram from "./assets/PresentSpeakers/VIKRAM RAI.jpeg";
 
 import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -167,7 +167,7 @@ const App = () => {
             <h2 className="text-3xl font-bold mb-8 w-full text-center">
               Speaker Line-Up
             </h2>
-            <Carousel images={teamMembers} number={4} />
+            <Carousel images={teamMembers} number={3} />
             <div className="container mx-auto py-12">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
