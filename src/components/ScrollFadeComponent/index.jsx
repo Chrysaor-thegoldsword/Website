@@ -29,7 +29,7 @@ const ScrollFadeComponent = () => {
     >
       <motion.div className="py-2 mt-12">
         <motion.div className="mb-2">TEDxMDIGurgaon</motion.div>
-        <motion.div className="mb-2 hidden md:block">
+        <motion.div className="mb-2 hidden md:block text-base">
           TEDxMDIGurgaon was started in 2016 as an independently organized TEDx
           event under the license of TED. Hosted at the Management Development
           Institute (MDI) in Gurgaon, it aims to bring together a diverse group

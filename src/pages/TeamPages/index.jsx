@@ -29,7 +29,11 @@ import Kashavi from "../../assets/junior_team/Kashavi.jpeg";
 import Deepanshu from "../../assets/junior_team/Deepanshu.jpeg";
 import Anirudha from "../../assets/junior_team/Anirudha.png";
 import Ispita from "../../assets/junior_team/Ispita.jpeg";
-
+import Nandini from "../../assets/junior_team/Nandini.jpeg";
+import Sanchita_B from "../../assets/junior_team/Sanchita_B.jpeg";
+import Dhriti from "../../assets/junior_team/Dhriti.jpeg";
+import Mukul from "../../assets/junior_team/Mukul.jpeg";
+import Subholaxmi from "../../assets/junior_team/Subholaxmi.jpeg";
 
 const TeamPage = () => {
   const teamMembers23 = [
@@ -59,8 +63,13 @@ const TeamPage = () => {
     { name: "Abhiraj", image: Abhiraj },
     { name: "Kashavi", image: Kashavi },
     { name: "Jai", image: Jai },
-    { name: "Sanskar", image: Sanskar }
-  
+    { name: "Sanskar", image: Sanskar },
+    { name: "Nandini", image: Nandini },
+    { name: "Sanchita", image: Sanchita_B },
+    { name: "Dhriti", image: Dhriti },
+    { name: "Mukul", image: Mukul },
+    { name: "Subholaxmi", image: Subholaxmi },
+
     // Add more members as needed
   ];
 
