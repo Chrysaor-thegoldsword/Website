@@ -104,6 +104,7 @@ const App = () => {
             id="tedxVideo"
             autoPlay
             muted
+           poster={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiCO0HavOQon08LD4wiEUPOGazhlIs9Fj9RQ&s`} 
             onEnded={handleVideoEnd}
             className="fixed top-0 left-0 w-full h-full bg-black object-scale-down md:object-cover z-10"
             initial={{ opacity: 0 }}

@@ -10,9 +10,9 @@ const FooterComponent = () => {
 
     emailjs.sendForm(
       import.meta.env.VITE_ENV_SERVICE_ID,   // Replace with your EmailJS service ID
-      import.meta.env.VITE_ENV_SERVICE_ID ,  // Replace with your EmailJS template ID
+      import.meta.env.VITE_ENV_TEMPLATE_ID ,  // Replace with your EmailJS template ID
       form.current,
-      import.meta.env.VITE_ENV_SERVICE_ID         // Replace with your EmailJS user ID
+      import.meta.env.VITE_ENV_USER_ID         // Replace with your EmailJS user ID
     )
     .then((result) => {
         console.log(result.text);
