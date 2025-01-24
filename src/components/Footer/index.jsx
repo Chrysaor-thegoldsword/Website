@@ -117,14 +117,14 @@ const FooterComponent = () => {
                 Facebook
               </motion.a>
               <motion.a
-                href="https://twitter.com"
+                href="https://www.linkedin.com/company/tedxmdi/"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="text-white hover:text-gray-400"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Twitter
+                LinkedIn
               </motion.a>
               <motion.a
                 href="https://www.instagram.com/tedxmdigurgaon"
