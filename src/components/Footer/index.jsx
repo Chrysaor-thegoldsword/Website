@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 
+//Niha
 const FooterComponent = () => {
   const form = useRef();
 
